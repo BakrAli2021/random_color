@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="box">
+            <div class="circle">
+                <h2>Happy Day</h2>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const count =200;
+        let sec=  document.querySelector('section');
+        var i=0;
+        var color=['#ff2a2a','#2a44ff','#fcff22','#99ff2a','#2a93ff','#2aff7f','#ff2abd','#ff2a79','#ff6f2a','#55ff2a']
+        while(i<count){
+            var bub =document.createElement('i');
+            var x = Math.floor(Math.random() * window.innerWidth);
+            var y = Math.floor(Math.random() * window.innerHeight);
+            var c =Math.floor(Math.random() *10);
+            var size =Math.random()*10;
+            bub.style.left=x+'px';
+            bub.style.top=y+'px';
+            bub.style.width=1+size+'px';
+            bub.style.height=1+size+'px';
+            bub.style.animationDelay=-size+'s';
+            bub.style.backgroundColor=`${color[c]}`;
+            sec.appendChild(bub);
+            i++;
+
+        }
+    </script>
+</body>
+</html>
